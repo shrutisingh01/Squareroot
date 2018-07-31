@@ -9,7 +9,7 @@ public class squareroot {
 	public static void main(String[] args) throws InterruptedException, ExecutionException {
 		double sum = 0;
 		ExecutorService executor = Executors.newFixedThreadPool(10);
-		for (int i = 1; i < 10; i++) {		
+		for (int i = 1; i <= 10; i++) {		
 		Future<Double> result = executor.submit(new Mycallable(i));
 		sum = sum + result.get();
 		}
